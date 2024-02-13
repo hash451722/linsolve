@@ -1,7 +1,7 @@
 use std::vec;
 
 #[derive(Debug)]
-struct CooSquareMatrix {
+pub struct CooSquareMatrix {
     nth: usize,  // n-th order
     row_indices: Vec<usize>,
     col_indices: Vec<usize>,
