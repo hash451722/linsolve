@@ -9,7 +9,7 @@ pub struct CooSquareMatrix {
 }
 
 impl CooSquareMatrix {
-    fn new(nth: usize) -> CooSquareMatrix {
+    pub fn new(nth: usize) -> CooSquareMatrix {
         CooSquareMatrix {
             nth,
             row_indices: Vec::new(),
@@ -18,13 +18,13 @@ impl CooSquareMatrix {
         }
     }
 
-    fn push(&mut self, row: usize, col: usize, value: f64) {
+    pub fn push(&mut self, row: usize, col: usize, value: f64) {
         self.row_indices.push(row);
         self.col_indices.push(col);
         self.values.push(value);
     }
 
-    fn clear(&mut self) {
+    pub fn clear(&mut self) {
         self.row_indices = Vec::new();
         self.col_indices = Vec::new();
         self.values = Vec::new();
@@ -121,7 +121,7 @@ impl Solver {
     }
 
     // Solve the linear system Ax = b using LU factorization
-    fn lu(a: &CooSquareMatrix, b: &Vec<f64>) -> Vec<f64> {
+    pub fn lu(a: &CooSquareMatrix, b: &Vec<f64>) -> Vec<f64> {
         let lu_matrix: Vec<Vec<f64>> = Solver::lu_decomposition(&a);
         // Ly=b
         let mut y: Vec<f64> = vec![0.0; b.len()];
