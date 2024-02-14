@@ -97,7 +97,7 @@ impl Vector {
 }
 
 
-struct Solver {}
+pub struct Solver {}
 impl Solver {
     fn lu_decomposition(a: &CooSquareMatrix) -> Vec<Vec<f64>> {
         let mut lu_matrix: Vec<Vec<f64>> = vec![vec![0.0; a.nth]; a.nth];
