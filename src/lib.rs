@@ -159,7 +159,7 @@ impl Solver {
         Solver::norm2(&e) / Solver::norm2(&b)
     }
 
-    fn gaussseidel(a: &CooSquareMatrix, b: &Vec<f64>, tol: f64, maxiter: u32) -> Vec<f64> {
+    pub fn gaussseidel(a: &CooSquareMatrix, b: &Vec<f64>, tol: f64, maxiter: u32) -> Vec<f64> {
         let mut x: Vec<f64> = vec![0.0; b.len()];
         // println!("{}:  x_gs= {:?}", 0, &x);
         for _iter in 0..maxiter {
@@ -180,7 +180,7 @@ impl Solver {
         x
     }
 
-    fn sor(a: &CooSquareMatrix, b: &Vec<f64>, omega: f64, tol: f64, maxiter: u32) -> Vec<f64> {
+    pub fn sor(a: &CooSquareMatrix, b: &Vec<f64>, omega: f64, tol: f64, maxiter: u32) -> Vec<f64> {
         let mut x: Vec<f64> = vec![0.0; b.len()];
         // println!("{}:  x_sor= {:?}", 0, &x);
         for _iter in 0..maxiter {
@@ -202,7 +202,7 @@ impl Solver {
     }
 
     // Bi-Conjugate Gradient method
-    fn bicg(a: &CooSquareMatrix, b: &Vec<f64>, tol: f64, maxiter: u32) -> Vec<f64> {
+    pub fn bicg(a: &CooSquareMatrix, b: &Vec<f64>, tol: f64, maxiter: u32) -> Vec<f64> {
         let mut x: Vec<f64> = vec![0.0; b.len()];
         let mut r: Vec<f64> = Vector::sub(b, &a.mul(&x));  // residual error
         let mut rs: Vec<f64> = r.clone();  // shadow residual error
@@ -242,7 +242,7 @@ impl Solver {
     }
 
     // Bi-Conjugate Gradient Stabilized method
-    fn bicgstab (a: &CooSquareMatrix, b: &Vec<f64>, tol: f64, maxiter: u32) -> Vec<f64> {
+    pub fn bicgstab (a: &CooSquareMatrix, b: &Vec<f64>, tol: f64, maxiter: u32) -> Vec<f64> {
         let mut x: Vec<f64> = vec![0.0; b.len()];
         let mut r: Vec<f64> = Vector::sub(b, &a.mul(&x));  // residual error
         let rs0: Vec<f64> = r.clone();  // shadow residual error
