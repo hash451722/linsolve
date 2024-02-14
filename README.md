@@ -1,6 +1,6 @@
 # linsolve  ( Linear system equation solver )
 
-A linear system equation solver for Rust.
+Provides solvers for systems of linear equations frequently encountered in engineering problems, such as circuit analysis, structural analysis, and fluid dynamics.
 
 
 ## Usage
