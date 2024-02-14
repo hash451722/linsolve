@@ -1,4 +1,4 @@
-# linsolve  ( Linear system equation solver )
+# linsolve  : System of linear equations solver
 
 Provides solvers for systems of linear equations frequently encountered in engineering problems, such as circuit analysis, structural analysis, and fluid dynamics.
 
