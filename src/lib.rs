@@ -1,5 +1,3 @@
-use std::vec;
-
 #[derive(Debug)]
 pub struct CooSquareMatrix {
     nth: usize,  // n-th order
