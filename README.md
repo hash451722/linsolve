@@ -4,7 +4,40 @@ Provides solvers for systems of linear equations frequently encountered in engin
 
 ## Fomula
 
-$a$ ded
+## 連立一次方程式
+
+$$
+Ax = b
+$$
+
+ここで， $A$ は係数行列， $x$ は解ベクトル， $b$ は定数ベクトルである．
+
+$$
+\begin{pmatrix} 
+    a_{11} & a_{12} & \dots  & a_{1n} \\
+    a_{21} & a_{22} & \dots  & a_{2n} \\
+    \vdots & \vdots & \ddots & \vdots \\
+    a_{n1} & a_{n2} & \dots  & a_{nn}
+\end{pmatrix}
+
+\begin{pmatrix} 
+    x_{1} \\
+    x_{2} \\
+    \vdots \\
+    x_{n}
+\end{pmatrix}
+
+=
+
+\begin{pmatrix} 
+    b_{1} \\
+    b_{2} \\
+    \vdots \\
+    b_{n}
+\end{pmatrix}
+$$
+
+
 
 
 
