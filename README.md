@@ -2,6 +2,11 @@
 
 Provides solvers for systems of linear equations frequently encountered in engineering problems, such as circuit analysis, structural analysis, and fluid dynamics.
 
+## Fomula
+
+$a$ ded
+
+
 
 ## Usage
 
